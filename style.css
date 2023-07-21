@@ -1,0 +1,43 @@
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  select {
+    padding: 5px;
+    width: 100%;
+    
+  }
+  
+  /* Media Query for Responsive Design */
+  
+  @media (max-width: 768px) {
+    body {
+      margin: 10px;
+    }
+  
+    .container {
+      max-width: 100%;
+    }
+  }
+  

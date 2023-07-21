@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>BANK INTEREST RATE DISPLAY</h2>
+  <div class="dropdown">
+   <select name="bank" class="btn btn-primary dropdown-toggle" id="bank">
+   
+    <option value="" class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">--select bank--</option>
+    <option value="Abhyudaya Cooperative Bank" >Abhyudaya Cooperative Bank</option>
+    <option value="ABU DHABI COMMERCIAL BANK">ABU DHABI COMMERCIAL BANK</option>
+    <option value="Ahmedabad Mercantile Co Operative Bank">Ahmedabad Mercantile Co Operative Bank</option>
+    <option value="Airtel Payments Bank">Airtel Payments Bank</option>
+    <option value="Akola Janata Commercial Co Operative Bank">Akola Janata Commercial Co Operative Bank</option>
+    <option value="Allahabad Bank">Allahabad Bank</option><option value="Almora Urban Cooperative Bank">Almora Urban Cooperative Bank</option><option value="Andhra Bank">Andhra Bank</option><option value="Andhra Pragathi Grameena Bank">Andhra Pragathi Grameena Bank</option><option value="Australia and New Zealand Banking Group">Australia and New Zealand Banking Group</option><option value="Axis Bank">Axis Bank</option><option value="Bandhan Bank">Bandhan Bank</option><option value="Bank of America">Bank of America</option><option value="Bank of Baharain and Kuwait BSC">Bank of Baharain and Kuwait BSC</option><option value="Bank of Baroda">Bank of Baroda</option><option value="Bank of Ceylon">Bank of Ceylon</option><option value="Bank of India">Bank of India</option><option value="Bank of Maharashtra">Bank of Maharashtra</option><option value="Bank of Tokyo Mitsubishi">Bank of Tokyo Mitsubishi</option><option value="Barclays Bank">Barclays Bank</option><option value="Bassein Catholic Cooperative Bank">Bassein Catholic Cooperative Bank</option><option value="Canara Bank">Canara Bank</option><option value="Catholic Syrian Bank">Catholic Syrian Bank</option><option value="Central Bank of India">Central Bank of India</option><option value="Citi Bank">Citi Bank</option><option value="City Union Bank">City Union Bank</option><option value="Corporation Bank">Corporation Bank</option><option value="DCB Bank">DCB Bank</option><option value="Dena Bank">Dena Bank</option><option value="Deogiri Nagari Sahakari Bank Aurangabad">Deogiri Nagari Sahakari Bank Aurangabad</option><option value="Deustche Bank">Deustche Bank</option><option value="Dhanalakshmi Bank">Dhanalakshmi Bank</option><option value="Federal Bank">Federal Bank</option><option value="Gurgaon Gramin Bank">Gurgaon Gramin Bank</option><option value="HDFC Bank">HDFC Bank</option><option value="Himachal Pradesh State Cooperative Bank">Himachal Pradesh State Cooperative Bank</option><option value="HSBC Bank">HSBC Bank</option><option value="ICICI Bank">ICICI Bank</option><option value="IDBI Bank">IDBI Bank</option><option value="IDFC Bank">IDFC Bank</option><option value="Indian Bank">Indian Bank</option><option value="Indian Overseas Bank">Indian Overseas Bank</option><option value="Indusind Bank">Indusind Bank</option><option value="Jammu and Kashmir Bank">Jammu and Kashmir Bank</option><option value="Karnataka Bank">Karnataka Bank</option><option value="Karnataka Vikas Grameena Bank">Karnataka Vikas Grameena Bank</option><option value="Karur Vysya Bank">Karur Vysya Bank</option><option value="Kerala Gramin Bank">Kerala Gramin Bank</option><option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option><option value="Lakshmi Vilas Bank">Lakshmi Vilas Bank</option><option value="Nainital Bank">Nainital Bank</option><option value="Oriental Bank of Commerce">Oriental Bank of Commerce</option><option value="Pragathi Krishna Gramin Bank">Pragathi Krishna Gramin Bank</option><option value="Prathama Bank">Prathama Bank</option><option value="Punjab and Sind Bank">Punjab and Sind Bank</option><option value="Punjab National Bank">Punjab National Bank</option><option value="RBL Bank">RBL Bank</option><option value="Reserve Bank of India">Reserve Bank of India</option><option value="South Indian Bank">South Indian Bank</option><option value="Standard Chartered Bank">Standard Chartered Bank</option><option value="State Bank of Bikaner and Jaipur">State Bank of Bikaner and Jaipur</option><option value="State Bank of Hyderabad">State Bank of Hyderabad</option><option value="State Bank of India">State Bank of India</option><option value="State Bank of Mysore">State Bank of Mysore</option><option value="State Bank of Patiala">State Bank of Patiala</option><option value="State Bank of Travancore">State Bank of Travancore</option><option value="Syndicate Bank">Syndicate Bank</option><option value="Tamilnad Mercantile Bank">Tamilnad Mercantile Bank</option><option value="UCO Bank">UCO Bank</option><option value="United Bank of India">United Bank of India</option><option value="Vijaya Bank">Vijaya Bank</option><option value="Yes Bank">Yes Bank</option><option value="Zila Sahakri Bank">Zila Sahakri Bank</option>						
+  
+  </select>
+  </div><br>
+  <p><strong>Note:</strong> The data-toggle="dropdown" attribute is required regardless of whether you call the dropdown() method.</p>
+</div>
+
+<script>
+$(document).ready(function(){
+  $(".dropdown-toggle").dropdown();
+});
+</script>
+
+</body>
+</html>
+
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Interest rate Display</title>
+   <script src="bank.js"></script>
+   <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+   <h1>Bank Interest rate Display</h1>
+   <div>
+     <label for="bankSelect">Select a bank:</label>
+     <select id="bankSelect" onchange="populateStates()">
+       <option value="">Select bank</option>
+       <option value="bank1">Bank 1</option>
+       <option value="bank2">Bank 2</option>
+       <!-- Add other bank options here -->
+     </select>
+   </div>
+ 
+   <div>
+     <label for="stateSelect">Select a state:</label>
+     <select id="stateSelect" onchange="populateDistricts()">
+       <option value="">Select state</option>
+       <!-- State options will be populated dynamically -->
+     </select>
+   </div>
+ 
+   <div>
+     <label for="districtSelect">Select a district:</label>
+     <select id="districtSelect" onchange="populateBranches()">
+       <option value="">Select district</option>
+       <!-- District options will be populated dynamically -->
+     </select>
+   </div>
+ 
+   <div>
+     <label for="branchSelect">Select a branch:</label>
+     <select id="branchSelect">
+       <option value="">Select branch</option>
+       <!-- Branch options will be populated dynamically -->
+     </select>
+   </div>
+ 
+   <script src="script.js"></script>
+ </body>
+ </html>
+ 
